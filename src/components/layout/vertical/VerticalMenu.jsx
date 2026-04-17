@@ -108,7 +108,7 @@ const VerticalMenu = ({ scrollMenu }) => {
             Help Center
           </MenuItem>
         </SubMenu> */}
-        <MenuSection label='Apps & Pages'>
+        <MenuSection label='Operation Desk'>
           {/* <MenuItem
             href={`${process.env.NEXT_PUBLIC_PRO_URL}/apps/email`}
             icon={<i className='ri-mail-open-line' />}
@@ -141,10 +141,14 @@ const VerticalMenu = ({ scrollMenu }) => {
           >
             Kanban
           </MenuItem> */}
-          <MenuItem href='/account-settings' icon={<i className='ri-user-settings-line' />}>
+          {/* <MenuItem href='/account-settings' icon={<i className='ri-user-settings-line' />}>
             Account Settings
-          </MenuItem>
-          <SubMenu label='Auth Pages' icon={<i className='ri-shield-keyhole-line' />}>
+          </MenuItem> */}
+          <SubMenu label='User Management' icon={<i className='ri-shield-keyhole-line' />}>
+            <MenuItem href='/users'>Users</MenuItem>
+            <MenuItem href='/roles'>Roles</MenuItem>
+          </SubMenu>
+          {/* <SubMenu label='Auth Pages' icon={<i className='ri-shield-keyhole-line' />}>
             <MenuItem href='/login' target='_blank'>
               Login
             </MenuItem>
@@ -165,13 +169,13 @@ const VerticalMenu = ({ scrollMenu }) => {
           </SubMenu>
           <MenuItem href='/card-basic' icon={<i className='ri-bar-chart-box-line' />}>
             Cards
-          </MenuItem>
+          </MenuItem> */}
         </MenuSection>
-        <MenuSection label='Forms & Tables'>
-          <MenuItem href='/form-layouts' icon={<i className='ri-layout-4-line' />}>
+        {/* <MenuSection label='Forms & Tables'> */}
+        {/* <MenuItem href='/form-layouts' icon={<i className='ri-layout-4-line' />}>
             Form Layouts
-          </MenuItem>
-          {/* <MenuItem
+          </MenuItem> */}
+        {/* <MenuItem
             href={`${process.env.NEXT_PUBLIC_PRO_URL}/forms/form-validation`}
             icon={<i className='ri-checkbox-multiple-line' />}
             suffix={<Chip label='Pro' size='small' color='primary' variant='tonal' />}
@@ -195,7 +199,7 @@ const VerticalMenu = ({ scrollMenu }) => {
           >
             React Table
           </MenuItem> */}
-          <MenuItem
+        {/* <MenuItem
             href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/form-elements`}
             icon={<i className='ri-radio-button-line' />}
             suffix={<i className='ri-external-link-line text-xl' />}
@@ -205,9 +209,9 @@ const VerticalMenu = ({ scrollMenu }) => {
           </MenuItem>
           <MenuItem href='/mui-tables' icon={<i className='ri-table-2' />}>
             Mui Tables
-          </MenuItem>
-        </MenuSection>
-        <MenuSection label='Misc'>
+          </MenuItem> */}
+        {/* </MenuSection> */}
+        {/* <MenuSection label='Misc'>
           <MenuItem
             href={`${process.env.NEXT_PUBLIC_DOCS_URL}/docs/user-interface/foundation`}
             icon={<i className='ri-pantone-line' />}
@@ -266,7 +270,7 @@ const VerticalMenu = ({ scrollMenu }) => {
             </SubMenu>
             <MenuItem disabled>Disabled Menu</MenuItem>
           </SubMenu>
-        </MenuSection>
+        </MenuSection> */}
       </Menu>
     </ScrollWrapper>
   )

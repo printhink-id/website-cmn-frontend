@@ -7,12 +7,24 @@ import { forwardRef } from 'react'
 import Link from 'next/link'
 
 export const RouterLink = forwardRef((props, ref) => {
-  // Props
-  const { href, className, ...other } = props
+  const { href, className, children, ...other } = props
+
+  if (!href) {
+    console.warn('RouterLink: href is undefined', props)
+  }
+
+  // 🛡️ Guard biar gak error
+  if (!href) {
+    return (
+      <span ref={ref} className={className} {...other}>
+        {children}
+      </span>
+    )
+  }
 
   return (
     <Link ref={ref} href={href} className={className} {...other}>
-      {props.children}
+      {children}
     </Link>
   )
 })
